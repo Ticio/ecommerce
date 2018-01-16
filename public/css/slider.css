@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+#slider
+{
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 3%;
+  border-bottom: 2px solid rgba(0,0,0, 0.1);
+}
+
+.carousel-control
+{
+  background-image: none !important;
+}

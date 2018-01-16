@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+
+.thumbnail
+{
+	padding: 0 !important;
+	margin: 9px 0;
+	border: 2px solid rgba(0,0,0, 0.1);
+}
+
+.thumbnail img
+{
+	margin: auto;
+}
+
+.thumbnail .price
+{
+	margin: 5px 5px 5px 12px;
+	color:#555;
+	font-size:1.2em;
+	font-weight:700;
+}
+
+.btn-group
+{
+	width: 100%;
+	display:block;
+}
+
+.thumbnail a, .thumbnail button
+{
+	font-size: 14px;
+	font-weight: bold;
+	width: 50%;
+	margin: 0 !important;
+	border-radius: 0;
+}
+
+

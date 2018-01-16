@@ -1,0 +1,64 @@
+.footer
+{
+	padding: 2% 0 1% 1%;
+	background-color: #1D1919;
+	color: #fff;
+}
+
+.footer a, .footer p, .footer  i
+{
+	color: #fff;
+	text-decoration: none;
+}
+
+.footer a:hover
+{
+	color: #0fc7a5;
+}
+
+.footer h4 
+{
+	color: #0fc7a5;
+	font-weight: bold;
+}
+
+/*scollup icon*/
+
+.scrollup {
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	position: fixed;
+	bottom: 20px;
+	right: 25px;
+	color: #fff;
+	cursor: pointer;
+	background-color: #0fc7a5;
+	z-index: 10;
+	transition: opacity .5s, background-color .5s;
+	-moz-transition: opacity .5s, background-color .5s;
+	-webkit-transition: opacity .5s, background-color .5s;
+}
+
+.scrollup:hover {
+	background: #fff;
+	opacity: 1;
+}
+
+.scrollup:hover i
+{
+	color: #0fc7a5;
+}
+
+.scrollup i {
+	font-size: 13px;
+	position: absolute;
+	opacity: 1;
+	color: #fff;
+	left: 50%;
+	top: 50%;
+	margin-top: -7px;
+	margin-left: -6px;
+	text-decoration: none;
+
+}
