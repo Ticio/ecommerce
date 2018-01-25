@@ -118,7 +118,7 @@ class ProductController extends Controller
           }
 
 
-          //\Mail::to($buyer)->send(new SoldMailSaler);
+          \Mail::to($buyer)->send(new SoldMailSaler);
 
           Session::forget('cart');
           return redirect()->route('getCart')->with('success', 'Succefully purchased');
