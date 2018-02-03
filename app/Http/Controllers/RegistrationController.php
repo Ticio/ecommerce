@@ -28,8 +28,8 @@ class RegistrationController extends Controller
             $product->product_type_id = $request->product_type_id;
             $product->product_condition = $request->product_condition;
             $product->price = $request->price;
-            $product->quantity = 1;
-
+            $product->quantity = $request->quantity;
+            
             $product->save();
         }
         else

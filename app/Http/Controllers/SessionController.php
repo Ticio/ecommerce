@@ -15,6 +15,7 @@ class SessionController extends Controller
 
     public function home()
     {
+
         $products_page = Product::where('state_id', 1)
                                  ->where('location', 'page')
                                 ->latest()

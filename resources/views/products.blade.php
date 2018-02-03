@@ -16,52 +16,9 @@
 @section('container-two-section-one')
     
     <br>
-    <br>
-    <br>
-    <br>
-
-    {{-- <div class="row">
-      <form action="forTest" method="post" enctype="multipart/form-data">
-
-        {{csrf_field()}}
-          <div class="form-group col-md-3">
-            <select class="form-control" name="product_type_id">
-              <option value="0" selected disabled>Product type</option>
-              <option value="0">Any</option>
-              <option value="1">Clothe</option>
-              <option value="2">Electronic</option>
-              <option value="3">Shoe</option>
-            </select>
-          </div>
-
-          <div class="form-group col-md-3">
-            <select class="form-control" name="condition">
-              <option value="Brand New" selected disabled>Condition</option>
-              <option value="0">Any</option>
-              <option value="Brand New">Brand New</option>
-              <option value="Fairly Used">Fairly Used</option>
-              <option value="Very Used">Very Used</option>
-              
-          </div>
-
-          <div class="form-group col-md-3">
-            <select class="form-control" name="product_size">
-              <option value="Brand New" selected disabled>Size</option>
-              <option value="0">Any</option>
-              <option value="Brand New">XL</option>
-              <option value="Fairly Used">XS</option>
-              <option value="Very Used">S</option>
-            </select>
-          </div>
-        
-          <div class="col-md-3">
-            <input class="btn btn-primary" type="submit" name="search" value="Search">
-            <input class="btn btn-danger" type="reset">
-          </div>
-      </form>
-    </div> --}}
-    <br>
-
+    <br><br>
+    <br><br>
+    
     @foreach ($products->chunk(4) as $product_chunck)
       <div class="row">
 

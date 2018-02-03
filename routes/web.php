@@ -33,12 +33,15 @@ Route::get('/add-to-cart/{id}', 'ProductController@getAddToCart')->name('cart');
 ///////////////////////////////////////////////////////////////////////////////
 
 Route::get('getCart', 'ProductController@getCart')->name('getCart');
+
 Route::post('postCheckout', "ProductController@postCheckout")->name('postCheckout');
 
 Route::get('products', "ProductController@all_products")->name('products');
-Route::post('forTest', "ProductController@forTest")->name('forTest');
-
 
 Route::get('/remove/{id}', 'ProductController@getRemoveItem')->name('removeItem');
+Route::get('/reduce/{id}', 'ProductController@getReduceByOne')->name('reduceItem');
+
+////This is the search route
+Route::post('basicSearch', 'SearchController@basicSearch');
 
 Auth::routes();

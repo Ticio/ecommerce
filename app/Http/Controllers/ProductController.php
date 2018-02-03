@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 use App\Product;
 use App\Cart;
 use App\Sale;
-use App\Mail\SoldMailBuyer;
-use App\Mail\SoldMailSeller;
+use App\Mail\EmailSeller;
 use App\User;
+use Mail;
 
 use Session;
 
@@ -30,16 +30,9 @@ class ProductController extends Controller
           return redirect()->route('home');
     }
 
-    public function forTest(Request $request)
-    {
-      dd($request->product_condition);
-    }
-
     public function all_products()
     {
-
-        $products = Product::where('state_id', 1)
-                                ->paginate(8); 
+        $products = Product::where('state_id', 1)->paginate(4); 
 
         return view('products', compact('products'));
     }
@@ -60,7 +53,12 @@ class ProductController extends Controller
         $cart->reduceByOne($id);
         Session::put('cart', $cart);
 
-        return redirect()->route('shopping_cart');
+        if ($cart->totalQty == 0)
+            Session::forget('cart');
+        else
+            Session::put('cart', $cart);
+        
+        return redirect()->route('getCart');
     }
 
     public function getRemoveItem($id)
@@ -79,14 +77,14 @@ class ProductController extends Controller
 
     public function getCheckout()
     {
-      if(!Session::has('cart')){
-        return view('shopping_cart');
-      }
+        if(!Session::has('cart')){
+          return view('shopping_cart');
+        }
 
-      $oldCart = Session::get('cart');
-      $cart = new Cart($oldCart);
-      $total = $cart->totalPrice;
-      return view('checkout', ['total' => $total]);
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        $total = $cart->totalPrice;
+        return view('checkout', ['total' => $total]);
     }
 
 
@@ -109,16 +107,23 @@ class ProductController extends Controller
               $sale->buyer_email = $request->input('email');
               $sale->product_id = $key;
 
-              Product::where('id', $key)->update(['state_id' => 6]);
+              // Product::where('id', $key)->update(['state_id' => 6]);
               $user = User::where('id', $value["item"]["user_id"])->get();
 
-              \Mail::to($user[0])->send(new SoldMailSeller);
+              // dd($user[0]->name);
+              Mail::to($user[0])->send(new EmailSeller($user[0]));
 
-              $sale->save();
+              // Mail::send(['text' => 'emails.emailSeller'], ['name', 'Swapnsells'], function($message){
+
+              //   $message->to('ticioguitar@gmail.com', 'Ticio')->subject('Test email');
+              //   $message->from('swapnsells@gmail.com', 'Swapnsells');
+              // });
+
+              // $sale->save();
           }
 
 
-          \Mail::to($buyer)->send(new SoldMailSaler);
+          // \Mail::to($buyer)->send(new SoldMailSaler);
 
           Session::forget('cart');
           return redirect()->route('getCart')->with('success', 'Succefully purchased');

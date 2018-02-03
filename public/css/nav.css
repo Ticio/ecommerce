@@ -9,3 +9,7 @@ nav .container{
   height: 100% !important;
   padding: 1% !important;
 }
+
+#social{
+	margin-top: -20px !important;
+}

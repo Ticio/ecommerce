@@ -51,6 +51,12 @@
 
                       <br>
                       <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-plus"></i></span>
+                        <input type="number" min="1" class="form-control" name="quantity" placeholder="Quantity" required>
+                      </div>
+
+                      <br>
+                      <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-tint"></i></span>
                         <input type="color" class="form-control" name="color" placeholder="Color" required>
                       </div>
@@ -59,7 +65,6 @@
                       <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-th-large"></i></span>
                         <input type="text" class="form-control" name="size" placeholder="Product Size. 1-Clothes: S, XL, M, etc. 2-Electronics: small, large, etc. 3-Shoes: 46, etc..." required>
-                        <p class="help-block">Help text here.</p>
                       </div>
 
                       <br>
@@ -69,6 +74,9 @@
                           <option value="1">Clothe</option>
                           <option value="2">Electronic</option>
                           <option value="3">Shoe</option>
+                          <option value="4">Jewellery</option>
+                          <option value="5">Book</option>
+                          <option value="6">Other</option>
                         </select>
                       </div>
 

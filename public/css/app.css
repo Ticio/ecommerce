@@ -11,7 +11,7 @@ html, body {
     margin-right: 0;
     font-family: 'robotolight';
     font-weight: 300;
-    min-height: 940px !important;
+    min-height: 1317px !important;
 }
 
 /*This is for the fized navbar*/
@@ -77,12 +77,12 @@ html, body {
 }
 
 /*Nav bar css*/
-.navbar-default {
-    border-color: transparent;
-    border-radius: 0;
-    padding-top: 9px;
+#mainNav {
+    border-color: transparent !important;
+    border-radius: 0 !important;
+    padding-top: 9px !important;
     background-color: #0fc7a5;
-    height: 95px;
+    /*height: 95px !important;*/
 }
 
 .navbar-default .navbar-nav>li>a {
