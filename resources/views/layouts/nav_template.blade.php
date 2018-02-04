@@ -12,7 +12,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{url('home')}}"><span>C</span>-Market</a>
+            <a class="navbar-brand" href="{{url('home')}}">Swapnsells</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

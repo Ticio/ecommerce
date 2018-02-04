@@ -14,3 +14,32 @@
 {
   background-image: none !important;
 }
+
+div.carousel-description
+{
+	background-image: -webkit-linear-gradient(rgba(0,0,0, 0.4), rgba(0,0,0, 0.1));
+  	background-image: -o-linear-gradient(rgba(0,0,0, 0.4), rgba(0,0,0, 0.1));
+  	background-image: linear-gradient(rgba(0,0,0, 0.4), rgba(0,0,0, 0.1));
+  	background-image: linear-gradient(rgba(0,0,0, 0.4), rgba(0,0,0, 0.1));
+
+  	/*position: absolute;
+	top: -454%;
+	left: -10%;*/
+
+	width: 32%;
+	height: 16%;
+	padding: 0.1% 1% 2% 1%;
+	margin: 0 auto;
+}
+
+.carousel-inner img
+{
+    transition: all .503s ease-in-out;
+}
+
+.carousel-inner img:hover
+{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}

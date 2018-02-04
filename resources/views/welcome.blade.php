@@ -9,7 +9,7 @@
     <div class="message text-center">
 
           <div class="row">
-             <h1 class="text-uppercase">Welcome to C-Market</h1>
+             <h1 class="">Welcome to Swapnsells</h1>
           </div>
 
           <br>

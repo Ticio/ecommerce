@@ -62,7 +62,6 @@
                       <div class="col-md-push-1 col-md-6">
                         <div class="text-left">
                           <p><b>Name: </b>{{$product->name}}</p>
-                          <p><b>Description: </b>{{$product->description}}</p>
                           <p><b>Price:</b> {{$product->price}}Rs</p>
                           <p><b>Size:</b> {{$product->size}}</p>
                           <p><b>Color:</b>

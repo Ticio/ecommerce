@@ -32,29 +32,121 @@
 
           @if ($i == 0)
             <div class="item active">
-              <img src="{{Storage::url($product->image_path)}}" class="img-responsive">
+              
+              <a data-toggle="modal" data-target="#modal_view{{$product->id}}">
+                <img src="{{Storage::url($product->image_path)}}" class="img-responsive">
+              </a>
               <div class="carousel-caption">
 
-                <h3 class="text-primary">{{$product->name}}</h3>
-                <h4 class="text-primary">{{$product->price}} mur</h4>
-                <a  id="cart" href="{{route('cart', ['id' => $product->id])}}"" class="btn btn-default"><i class="fa fa-shopping-cart"> Buy</i></a><br>
+              {{-- <div>
+                  <div class="carousel-description">
 
+                    <h3 style="color: #fff;"><b>{{$product->name}}</b></h3>
+                    <h4 style="color: #fff;"><b>{{$product->price}} mur</b></h4>
+                    <div>
+                      <a  id="cart" href="{{route('cart', ['id' => $product->id])}}" class="btn btn-default"><i class="fa fa-shopping-cart"> Buy</i></a>
+                      <a class="btn btn-primary" data-toggle="modal" data-target="#modal_view{{$product->id}}">
+                              <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> View</a>
+                    </div>
+
+                  </div>
+              </div> --}}
+              </div>
+            </div>
+
+            <div class="modal  fade" id="modal_view{{$product->id}}" role="dialog">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title text-center">Product View</h3>
+                  </div>
+                  <div class="modal-body">
+
+                    <div class="row">
+                      <div class="col-md-push-1 col-md-4">
+                        <img src="{{Storage::url($product->image_path)}}" alt="Thumbnail Image 1" class="img-responsive">
+                      </div>
+
+                      <div class="col-md-push-1 col-md-6">
+                        <div class="text-left">
+                          <p><b>Name: </b>{{$product->name}}</p>
+                          <p><b>Price:</b> {{$product->price}}Rs</p>
+                          <p><b>Size:</b> {{$product->size}}</p>
+                          <p><b>Color:</b>
+                            <span style="width: 20px; height: 10px; background-color: {{$product->color}}; color:{{$product->color}};border: 1px solid rgba(0,0,0);"> {{$product->color}}</span></p>
+                          <p><b>Condition:</b> {{$product->product_condition}}</p>
+                          <p><b>Description:</b> {{$product->description}} </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="{{route('cart', ['id' => $product->id])}}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>           Add to cart</a>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close &times;</button>
+                  </div>
+                </div>
               </div>
             </div>
           @else 
 
             <div class="item">
-              <img src="{{Storage::url($product->image_path)}}" class="img-responsive">
+              <a data-toggle="modal" data-target="#modal_view{{$product->id}}">
+                <img src="{{Storage::url($product->image_path)}}" class="img-responsive">
+              </a>
               <div class="carousel-caption">
 
-                <h3 class="text-primary">{{$product->name}}</h3>
-                <h4 class="text-primary">{{$product->price}} mur</h4>
-                <a  id="cart" href="{{route('cart', ['id' => $product->id])}}"" class="btn btn-default"><i class="fa fa-shopping-cart"> Buy</i></a><br>
-                
+                  {{-- <div>
+                    <div class="carousel-description">
 
+                      <h3 style="color: #fff;"><b>{{$product->name}}</b></h3>
+                      <h4 style="color: #fff;"><b>{{$product->price}} mur</b></h4>
+                      <div>
+                        <a  id="cart" href="{{route('cart', ['id' => $product->id])}}"" class="btn btn-default"><i class="fa fa-shopping-cart"> Buy</i></a>
+                        <a class="btn btn-primary" data-toggle="modal" data-target="#modal_view{{$product->id}}">
+                                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> View</a>
+                      </div>
+
+                    </div>
+                  </div> --}}
               </div>
             </div>
+            
+            <div class="modal  fade" id="modal_view{{$product->id}}" role="dialog">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title text-center">Product View</h3>
+                  </div>
+                  <div class="modal-body">
 
+                    <div class="row">
+                      <div class="col-md-push-1 col-md-4">
+                        <img src="{{Storage::url($product->image_path)}}" alt="Thumbnail Image 1" class="img-responsive">
+                      </div>
+
+                      <div class="col-md-push-1 col-md-6">
+                        <div class="text-left">
+                          <p><b>Name: </b>{{$product->name}}</p>
+                          <p><b>Price:</b> {{$product->price}}Rs</p>
+                          <p><b>Size:</b> {{$product->size}}</p>
+                          <p><b>Color:</b>
+                            <span style="width: 20px; height: 10px; background-color: {{$product->color}}; color:{{$product->color}};border: 1px solid rgba(0,0,0);"> {{$product->color}}</span></p>
+                          <p><b>Condition:</b> {{$product->product_condition}}</p>
+                          <p><b>Description:</b> {{$product->description}} </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="{{route('cart', ['id' => $product->id])}}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>           Add to cart</a>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close &times;</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
           @endif
 
           <?php $i++; ?>

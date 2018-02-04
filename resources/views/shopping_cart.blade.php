@@ -36,11 +36,49 @@
                 <div class="btn-group">
                   <button class="btn btn-primary btn-xs dropdown-toggle" type="button" name="button" data-toggle="dropdown">Action <span class="caret"></span> </button>
                   <ul class="dropdown-menu">
+                      <li>
+                        <a data-toggle="modal" data-target="#modal_view{{$product['item']['id']}}">
+                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> View</a>
+                      </li>
                       <li><a href="{{route('reduceItem', ['id' => $product['item']['id']])}}">Reduce</a></li>
                       <li><a href="{{route('removeItem', ['id' => $product['item']['id']])}}">Remove all</a></li>
                   </ul>
                 </div>
               </li>
+
+               <div class="modal  fade" id="modal_view{{$product['item']['id']}}" role="dialog">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title text-center">Product View</h3>
+                  </div>
+                  <div class="modal-body">
+
+                    <div class="row">
+                      <div class="col-md-push-1 col-md-4">
+                        <img src="{{Storage::url($product['item']['$product->image_path'])}}" alt="Thumbnail Image 1" class="img-responsive">
+                      </div>
+
+                      {{-- <div class="col-md-push-1 col-md-6">
+                        <div class="text-left">
+                          <p><b>Name: </b>{{$product->name}}</p>
+                          <p><b>Price:</b> {{$product->price}}Rs</p>
+                          <p><b>Size:</b> {{$product->size}}</p>
+                          <p><b>Color:</b>
+                            <span style="width: 20px; height: 10px; background-color: {{$product->color}}; color:{{$product->color}};border: 1px solid rgba(0,0,0);"> {{$product->color}}</span></p>
+                          <p><b>Condition:</b> {{$product->product_condition}}</p>
+                          <p><b>Description:</b> {{$product->description}} </p>
+                        </div>
+                      </div> --}}
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close &times;</button>
+                  </div>
+                </div>
+              </div>
+            </div>
             @endforeach
           </ul>
       </div>
