@@ -23,6 +23,7 @@ class RegistrationController extends Controller
             $product->color = $request->color;
             $product->state_id = 1;
             $product->shop_id = 1;
+            $product->location = 'page';
             $product->state_id = 1;
             $product->user_id = 1; //This has to be removed later
             $product->product_type_id = $request->product_type_id;

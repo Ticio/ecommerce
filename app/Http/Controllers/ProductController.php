@@ -32,7 +32,7 @@ class ProductController extends Controller
 
     public function all_products()
     {
-        $products = Product::where('state_id', 1)->paginate(4); 
+        $products = Product::where('state_id', 1)->paginate(16); 
 
         return view('products', compact('products'));
     }
