@@ -13,3 +13,10 @@ nav .container{
 #social{
 	margin-top: -20px !important;
 }
+
+.nav-logo .navbar-brand img
+{
+    width: 49px;
+    display: inline-block;
+    margin-top: -8%;
+}

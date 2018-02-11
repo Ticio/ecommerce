@@ -1,17 +1,29 @@
 @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed');
 
 html, body {
-    font-size: 15px;
+    /*font-size: 15px;
     color: #565656;
     width: 100%;
     padding: 0 !important;
     margin-left: 0;
     margin-right: 0;
+    
+    font-weight: 300;*/
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 100% !important;
     font-family: 'robotolight';
-    font-weight: 300;
-    min-height: 1317px !important;
+    font-size: 15px;
+}
+
+
+.wrapper
+{
+    min-height: 100%;
+    position: relative;
 }
 
 /*This is for the fized navbar*/
@@ -81,7 +93,7 @@ html, body {
     border-color: transparent !important;
     border-radius: 0 !important;
     padding-top: 9px !important;
-    background-color: #0fc7a5;
+    background-color: #25B08E;
     /*height: 95px !important;*/
 }
 
@@ -107,7 +119,6 @@ html, body {
     margin-left: 22px;
     display: inline-block;
     overflow: hidden;
-
 }
 
 .navbar-default .collapse .login:hover a{

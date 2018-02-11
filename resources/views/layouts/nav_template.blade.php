@@ -12,7 +12,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{url('home')}}">Swapnsells</a>
+            
+            <div class="nav-logo">
+              <a class="navbar-brand" href="{{url('home')}}">
+                 <img src="{{Storage::url('images/website/logo.png')}}" alt="logo">
+                 Swapnsells
+              </a>
+            </div>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -25,16 +31,28 @@
 
                 @if (Auth::check())
                     <li>
-                        <a href="register_product">
+                        <a href="{{ url('register_product') }}">
                             Sell Product
                         </a>
                     </li>
 
                     <li class="dropdown">
-                       <a class="dropdown-toggle" data-toggle="dropdown">{{Auth::user()->name}}</a>
+                       <a class="dropdown-toggle" data-toggle="dropdown">{{Auth::user()->name}} <span class="caret"></span></a>
                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                         {{-- <li><a href="#">Profile</a></li> --}}
-                         <li><a href="logout">Logout</a></li>
+                         
+                            <li>
+                                <a href=""><i class="fa fa-user"></i> Profile</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('store', ['id' => Auth::user()->id ]) }}"><i class="fa fa-cog"></i> Store</a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa fa-cog"></i> Sells</a>
+                            </li>
+                            <li>
+                                <a href="logout"><i class="fa fa-sign-out"></i> Logout</a>
+                            </li>
+
                        </ul>
                     </li>
                 @else

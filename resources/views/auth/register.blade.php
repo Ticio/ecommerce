@@ -44,7 +44,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('phone_number') ? ' has-error' : '' }}">
-                            <label for="phone_number" class="col-md-4 control-label">phone_number</label>
+                            <label for="phone_number" class="col-md-4 control-label">Phone number</label>
 
                             <div class="col-md-6">
                                 <input id="tel" type="tel" class="form-control" name="phone_number" value="{{ old('phone_number') }}">
@@ -52,6 +52,20 @@
                                 @if ($errors->has('phone_number'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('phone_number') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('whatsapp_number') ? ' has-error' : '' }}">
+                            <label for="whatsapp_number" class="col-md-4 control-label">Whatsapp number</label>
+
+                            <div class="col-md-6">
+                                <input id="whatsapp_number" type="tel" class="form-control" name="whatsapp_number" value="{{ old('whatsapp_number') }}">
+
+                                @if ($errors->has('whatsapp_number'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('whatsapp_number') }}</strong>
                                     </span>
                                 @endif
                             </div>

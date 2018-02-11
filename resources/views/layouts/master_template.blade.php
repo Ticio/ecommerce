@@ -24,26 +24,29 @@
   </head>
 
   <body>
-    @yield('nav-section')
-      
-    <div class="container-fluid" id="slider">
-      @yield('container-one-section-one')
+
+    <div class="wrapper">
+      @yield('nav-section')
+        
+      <div class="container-fluid" id="slider">
+        @yield('container-one-section-one')
+      </div>
+
+      <div class="container-fluid">
+        @yield('container-one-section-two')
+      </div>
+
+      <div class="container">
+        @yield('container-two-section-one')
+        @yield('container-two-section-two')
+      </div>
+
+      @yield('footer-section')
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+      @yield('js-links')
     </div>
-
-    <div class="container-fluid">
-      @yield('container-one-section-two')
-    </div>
-
-    <div class="container">
-      @yield('container-two-section-one')
-      @yield('container-two-section-two')
-    </div>
-
-    @yield('footer-section')
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    @yield('js-links')
   </body>
 </html>
