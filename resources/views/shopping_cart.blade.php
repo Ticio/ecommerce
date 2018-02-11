@@ -124,12 +124,14 @@
                     </br>
                     <div class="form-group">
                       <select class="form-control" name="residence">
-                        <option value="" selected disabled>Residence</option>
-                        <option value="">Paradise</option>
-                        <option value="">Piment Banane</option>
-                        <option value="">Hypertek</option>
-                        <option value="">Lotus</option>
-                        <option value="">Lilas</option>
+                        <option value="unKnown" selected disabled>Residence</option>
+                        <option value="Coral Apartments">Coral Apartments</option>
+                        <option value="Burnas">Burnas</option>
+                        <option value="Lilas">Lilas</option>
+                        <option value="Rooftop">Rooftop</option>
+                        <option value="Cilaus">Cilaus</option>
+                        <option value="Paradise View">Paradise View</option>
+                        <option value="Tanish">Tanish</option>
                       </select>
                     </div>
 
