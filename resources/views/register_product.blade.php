@@ -91,7 +91,7 @@
                       </div>
 
                       <div class="form-group">
-                        <textarea placeholder="Product Description" name="description" class="form-control" rows="1" cols="10"></textarea>
+                        <textarea placeholder="Product Description" name="description" class="form-control" rows="1" cols="10" required></textarea>
                       </div>
 
                       <div class="input-group">
