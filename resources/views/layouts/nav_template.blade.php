@@ -15,7 +15,7 @@
             
             <div class="nav-logo">
               <a class="navbar-brand" href="{{url('home')}}">
-                 <img src="{{Storage::url('images/website/logo.png')}}" alt="logo">
+                 <img src="{{Storage::url('public/images/website/logo.png')}}" alt="logo">
                  Swapnsells
               </a>
             </div>

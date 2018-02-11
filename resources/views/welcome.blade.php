@@ -9,7 +9,7 @@
     <div class="message text-center">
 
           <div class="row">
-             <img src="{{Storage::url('images/website/logo.png')}}" alt="logo" style="width: 100px;">
+             <img src="{{Storage::url('public/images/website/logo.png')}}" alt="logo" style="width: 100px;">
              <h1 class="">Welcome to Swapnsells</h1>
           </div>
 
