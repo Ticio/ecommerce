@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Product;
 use App\Cart;
 use App\Sale;
-use App\Mail\EmailSeller;
+use App\Mail\YourProductHasBeenSold;
 use App\User;
 use Mail;
 
@@ -100,18 +100,28 @@ class ProductController extends Controller
           foreach ($cart->items as $key => $value) {
 
               $sale = new Sale;
+              $buyer = new User;
 
               $sale->buyer_name = $request->input('name');
-              $sale->sale_time = date("Y-m-d H:i:s");
               $sale->buyer_phone = $request->input('phone_number');
               $sale->buyer_email = $request->input('email');
-              $sale->product_id = $key;
-
-              // Product::where('id', $key)->update(['state_id' => 6]);
+              $residence = $request->input('residence');
+              $room_number  = $request->input('room_number');            
+              
+              $sale->sale_time   = date("Y-m-d H:i:s");
+              $sale->product_id  = $key;
+  
+              Product::where('id', $key)->update(['state_id' => 6]);
               $user = User::where('id', $value["item"]["user_id"])->get();
 
-              // dd($user[0]->name);
-              Mail::to($user[0])->send(new EmailSeller($user[0]));
+              $user[0]->buyername = $sale->buyer_name;
+              $user[0]->buyerphone_number = $sale->buyer_phone;
+              $user[0]->buyeremail = $sale->buyer_email;
+              $user[0]->buyerresidence = $residence;
+              $user[0]->buyerroom_number = $room_number;
+
+              // dd($user[0]->buyername);
+              Mail::to($user[0])->send(new YourProductHasBeenSold( $user[0], $buyer, $residence, $room_number));
 
               // Mail::send(['text' => 'emails.emailSeller'], ['name', 'Swapnsells'], function($message){
 

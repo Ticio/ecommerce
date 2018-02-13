@@ -8,11 +8,16 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use App\User;
 
-class EmailSeller extends Mailable
+
+class YourProductHasBeenSold extends Mailable
 {
     use Queueable, SerializesModels;
 
+
+    public $residence;
     public $user;
+    public $buyer;
+    public $room_number;
     /**
      * Create a new message instance.
      *
@@ -20,7 +25,7 @@ class EmailSeller extends Mailable
      */
     public function __construct(User $user)
     {
-        $this->user = $user;
+        $this->user = $user;   
     }
 
     /**
