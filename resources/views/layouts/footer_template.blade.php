@@ -18,7 +18,7 @@
       <div class="col-sm-6 col-md-3 col-lg-3">
         <h4>Developed by</h4><br/>
         <p><i class="fa fa-chevron-up" aria-hidden="true"></i>  Elty Tech Company</p>
-        <p><i class="fa fa-envelope-o" aria-hidden="true"></i>  ektytechnologies@gmail.com</p>
+        <p><i class="fa fa-envelope-o" aria-hidden="true"></i>  eltytechnologies@gmail.com</p>
         <p><i class="fa fa-square-o" aria-hidden="true"></i>  +230 59299361</p>
         <p><a href=""><i class="fa fa-globe" aria-hidden="true"></i>   www.techafrica.com </a></p>
       </div>
