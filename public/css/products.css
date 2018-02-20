@@ -37,3 +37,9 @@
 	margin: 0 !important;
 	border-radius: 0;
 }
+
+.thumbnail img
+{
+	width: 230px;
+	height: 160px;
+}
