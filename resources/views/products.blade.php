@@ -20,7 +20,7 @@
     <br><br>
     
     @foreach ($products->chunk(4) as $product_chunck)
-      <div class="row">
+      <div class="row ">
 
         @foreach ($product_chunck as $product)
           @if($product->state_id == 1)

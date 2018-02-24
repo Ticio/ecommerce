@@ -57,20 +57,20 @@
 
                     <div class="row">
                       <div class="col-md-push-1 col-md-4">
-                        <img src="{{Storage::url($product['item']['$product->image_path'])}}" alt="Thumbnail Image 1" class="img-responsive">
+                        <img src="{{Storage::url($product['item']['image_path'])}}" alt="Thumbnail Image 1" class="img-responsive">
                       </div>
 
-                      {{-- <div class="col-md-push-1 col-md-6">
+                       <div class="col-md-push-1 col-md-6">
                         <div class="text-left">
-                          <p><b>Name: </b>{{$product->name}}</p>
-                          <p><b>Price:</b> {{$product->price}}Rs</p>
-                          <p><b>Size:</b> {{$product->size}}</p>
+                          <p><b>Name: </b>{{ $product['item']['name'] }}</p>
+                          <p><b>Price:</b> {{$product['item']['price'] }}Rs</p>
+                          <p><b>Size:</b> {{$product['item']['size']}}</p>
                           <p><b>Color:</b>
-                            <span style="width: 20px; height: 10px; background-color: {{$product->color}}; color:{{$product->color}};border: 1px solid rgba(0,0,0);"> {{$product->color}}</span></p>
-                          <p><b>Condition:</b> {{$product->product_condition}}</p>
-                          <p><b>Description:</b> {{$product->description}} </p>
-                        </div>
-                      </div> --}}
+                            <span style="width: 20px; height: 10px; background-color: {{$product['item']['color']}}; color:{{$product['item']['color']}}; border: 1px solid rgba(0,0,0);"> {{$product['item']['color']}}</span></p>
+                          <p><b>Condition:</b> {{$product['item']['product_condition']}}</p>
+                          <p><b>Description:</b> {{$product['item']['description']}} </p>
+                        </div> 
+                      </div>
                     </div>
                   </div>
                   <div class="modal-footer">

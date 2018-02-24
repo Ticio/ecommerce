@@ -10,7 +10,7 @@
       <div class="col-sm-6 col-md-3 col-lg-3">
         <h4>Contact Us</h4><br/>
         <p><i class="fa fa-home" aria-hidden="true"></i> Beau Plan, Plampemoss, B06 Road</p>
-        <p><i class="fa fa-envelope-o" aria-hidden="true"></i> swapnsells@gmail.com</p>
+        <p><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:swapnsells@gmail.com">swapnsells@gmail.com</a></p>
         <p><i class="fa fa-phone" aria-hidden="true"></i>  +230 59292878</p>
          <p><i class="fa fa-globe" aria-hidden="true"></i>   www.swapnsells.com</p>
       </div>
@@ -18,7 +18,7 @@
       <div class="col-sm-6 col-md-3 col-lg-3">
         <h4>Developed by</h4><br/>
         <p><i class="fa fa-chevron-up" aria-hidden="true"></i>  Elty Tech Company</p>
-        <p><i class="fa fa-envelope-o" aria-hidden="true"></i>  eltytechnologies@gmail.com</p>
+        <p><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:eltytechnologies@gmail.com">eltytechnologies@gmail.com</a></p>
         <p><i class="fa fa-square-o" aria-hidden="true"></i>  +230 59299361</p>
         <p><a href=""><i class="fa fa-globe" aria-hidden="true"></i>   www.eltytech.com </a></p>
       </div>

@@ -44,8 +44,16 @@ Route::get('/reduce/{id}', 'ProductController@getReduceByOne')->name('reduceItem
 ////This is the search route
 Route::post('basicSearch', 'SearchController@basicSearch');
 
+
 //Settings
+Route::get('user/profile', "SellerController@profile")->name('user/profile');
+Route::post('user/update', 'SellerController@profile_update')->name('user/update');;
+
 Route::get('store/{id}', "SellerController@store")->name('store');
 Route::get('store/delete/{id}', "SellerController@delete")->name('store/delete');
+
+Route::post('store/update/{id}', 'SellerController@product_update')->name('store/update');;
+
+
 
 Auth::routes();

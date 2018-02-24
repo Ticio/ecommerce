@@ -41,14 +41,14 @@
                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                          
                             <li>
-                                <a href=""><i class="fa fa-user"></i> Profile</a>
+                                <a href="{{ route('user/profile') }}"><i class="fa fa-user"></i> Edit Profile</a>
                             </li>
                             <li>
                                 <a href="{{ route('store', ['id' => Auth::user()->id ]) }}"><i class="fa fa-cog"></i> Store</a>
                             </li>
-                            <li>
-                                <a href=""><i class="fa fa-cog"></i> Sells</a>
-                            </li>
+                            {{-- <li>
+                                <a href=""><i class="fa fa-dropbox"></i> Sells</a>
+                            </li> --}}
                             <li>
                                 <a href="logout"><i class="fa fa-sign-out"></i> Logout</a>
                             </li>
@@ -73,7 +73,7 @@
             <div class="social-wrapper">
                 <div class="col-sm-4 col-md-4 col-xl-4">
                     <div class="social-contact">
-                        <a href="#"><i class="fa fa-envelope"></i>swapnsells@gmail.com</a>
+                        <a href="#"><i class="fa fa-envelope"></i><a href="mailto:swapnsells@gmail.com">swapnsells@gmail.com</a></a>
                     </div>
                 </div>
 
