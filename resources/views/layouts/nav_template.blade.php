@@ -73,7 +73,8 @@
             <div class="social-wrapper">
                 <div class="col-sm-4 col-md-4 col-xl-4">
                     <div class="social-contact">
-                        <a href="#"><i class="fa fa-envelope"></i><a href="mailto:swapnsells@gmail.com">swapnsells@gmail.com</a></a>
+                        <a href="mailto:swapnsells@gmail.com"><i class="fa fa-envelope"></i>swapnsells@gmail.com</a>
+                        <a href="https://docs.google.com/document/d/18jqsBzT8VRp8Vit428kiQa23wGVHzR2Tnsm2F5ZgsNE/edit?usp=sharing" target="_blank">FQA</a>
                     </div>
                 </div>
 

@@ -36,7 +36,11 @@ Route::get('/getCart', 'ProductController@getCart')->name('getCart');
 
 Route::post('/postCheckout', "ProductController@postCheckout")->name('postCheckout');
 
+///////////////////////////////////////////////////////////////////////////////////////////
+/// 								Responsible for routes                               //
 Route::get('/products', "ProductController@all_products")->name('products');
+Route::get('/product/{id}', "ProductController@product")->name('product');
+
 
 Route::get('/remove/{id}', 'ProductController@getRemoveItem')->name('removeItem');
 Route::get('/reduce/{id}', 'ProductController@getReduceByOne')->name('reduceItem');

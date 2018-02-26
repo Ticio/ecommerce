@@ -37,6 +37,13 @@ class ProductController extends Controller
         return view('products', compact('products'));
     }
 
+    public function product($id)
+    {
+        $product = Product::find($id);
+
+        return view('product', compact('product'));
+    }
+
     public function getCart()
     {
         $oldCart = Session::get('cart');
