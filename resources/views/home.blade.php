@@ -183,6 +183,10 @@
 
                   <img src="{{Storage::url($product->image_path)}}" class="img-responsive" alt=""/>
                   
+                  <div class="product_condition">
+                      <h6>{{$product->product_condition}}</h6>
+                  </div>
+
                   <div class="caption">
                     <p class="price">{{$product->price}}Rs</p>
 

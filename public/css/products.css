@@ -2,6 +2,22 @@
 
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 
+.product_condition
+{
+	background: #ff0000;
+    position: absolute;
+    top: 11px;
+    border-bottom-right-radius: 13px;
+    padding: 2px 4px;
+    font-size: 10px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.product_condition h6{
+	color: #fff;
+    font-weight: 800;
+
+}
 
 .thumbnail
 {
