@@ -36,8 +36,14 @@
 
                   <img src="{{Storage::url($product->image_path)}}" class="img-responsive" alt=""/>
                   
-                  <div class="product_condition">
-                      <h5>{{$product->product_condition}}</h6>
+                  @if( $product->product_condition == "Brand New")
+                    <div style="background-color: #065B0C;" class="product_condition">
+                  @elseif( $product->product_condition == "Fairly Used")
+                    <div style="background-color: #7E4106;" class="product_condition">
+                  @else
+                    <div class="product_condition">      
+                  @endif
+                        <h6>{{$product->product_condition}}</h6>
                   </div>
 
                   <div class="caption">
