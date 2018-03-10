@@ -140,7 +140,7 @@ class ProductController extends Controller
               //   $message->from('swapnsells@gmail.com', 'Swapnsells');
               // });
 
-              // $sale->save();
+              $sale->save();
           }
 
 
