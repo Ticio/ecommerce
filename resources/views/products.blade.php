@@ -32,8 +32,14 @@
 
                   <img src="{{Storage::url($product->image_path)}}" class="img-responsive" alt=""/>
                   
-                  <div class="product_condition">
-                      <h6>{{$product->product_condition}}</h6>
+                  @if( $product->product_condition == "Brand New")
+                    <div style="background-color: #065B0C;" class="product_condition">
+                  @elseif( $product->product_condition == "Fairly Used")
+                    <div style="background-color: #7E4106;" class="product_condition">
+                  @else
+                    <div class="product_condition">      
+                  @endif
+                        <h6>{{$product->product_condition}}</h6>
                   </div>
 
                   <div class="caption">
@@ -68,12 +74,18 @@
                           <p><b>Name: </b>{{$product->name}}</p>
                           <p><b>Price:</b> {{$product->price}}Rs</p>
                           <p><b>Size:</b> {{$product->size}}</p>
+
                           <p><b>Color:</b>
                             <span style="width: 20px; height: 10px; background-color: {{$product->color}}; color:{{$product->color}};border: 1px solid rgba(0,0,0);"> {{$product->color}}</span></p>
                           <p><b>Condition:</b> {{$product->product_condition}}</p>
                           <p><b>Description:</b> {{$product->description}} </p>
                         </div>
                       </div>
+                    </div>
+
+                    <div class="row text-center">
+                        <hr>
+                        <h4 class="text-warning">For more information here is the seller's whatsapp number:  <b>{{ $product->user->whatsapp_number }}</b></h4>
                     </div>
                   </div>
                   <div class="modal-footer">

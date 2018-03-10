@@ -80,6 +80,12 @@
                         </div>
                       </div>
                     </div>
+
+
+                    <div class="row text-center">
+                        <hr>
+                        <h4 class="text-warning">For more information here is the seller's whatsapp number:  <b>{{ $product->user->whatsapp_number }}</b></h4>
+                    </div>
                   </div>
                   <div class="modal-footer">
                     <a href="{{route('cart', ['id' => $product->id])}}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>           Add to cart</a>
@@ -137,6 +143,12 @@
                           <p><b>Description:</b> {{$product->description}} </p>
                         </div>
                       </div>
+                    </div>
+
+
+                    <div class="row text-center">
+                        <hr>
+                        <h4 class="text-warning">For more information here is the seller's whatsapp number:  <b>{{ $product->user->whatsapp_number }}</b></h4>
                     </div>
                   </div>
                   <div class="modal-footer">
@@ -225,6 +237,12 @@
                           <p><b>Description:</b> {{$product->description}} </p>
                         </div>
                       </div>
+                    </div>
+
+                    
+                    <div class="row text-center">
+                        <hr>
+                        <h4 class="text-warning">For more information here is the seller's whatsapp number:  <b>{{ $product->user->whatsapp_number }}</b></h4>
                     </div>
                   </div>
                   <div class="modal-footer">
