@@ -11,6 +11,10 @@
 	text-decoration: none;
 }
 
+.footer .modal-text, .footer .modal-text *, .terms{
+	color: #333;	
+}
+
 .footer a:hover
 {
 	color: #0fc7a5;
